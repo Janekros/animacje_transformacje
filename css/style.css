@@ -1,0 +1,44 @@
+img {
+    width: 500px;
+    height: 500px;
+    transition: all 0.7s;
+    margin-bottom: 50px;
+    /* strona, względem którego będzie się przekształcał, szczególnie dla scale. Wyjściowo ustawiony jest punkt środkowy */
+    transform-origin: left;
+}
+
+.rotate-example img:hover {
+    transform: rotate(-45deg);
+}
+
+.translate-example img:hover {
+    transform: translate(100px, -200px);
+}
+
+.scale-example img:hover {
+    transform: scale(1.5);
+}
+
+/* animacja */
+
+@keyframes animation-example {
+    
+    /* efekt zapętlenia, początek i koniec taki sam */
+    
+    0%, 100% {
+        width: 200px;
+        height: 200px;
+    }
+    
+    50% {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+.animation-example img {
+    animation-name: animation-example;
+    animation-duration: 5s;
+    animation-iteration-count: 2;  
+    animation-timing-function: linear;
+}
